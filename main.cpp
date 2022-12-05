@@ -49,6 +49,10 @@ int main(int argc, char *argv[])
     waveDataC1[1]= PCBag.at(1);
     int C1=waveDataC1.toHex().toInt(0,16);
     qDebug()<<C1;
+    
+    int numer = -5;
+    QByteArray arry2 = QByteArray::number(numer,16);  //这里10进制转换为16进制
+    qDebug()<<arry2;     //"fffffffb"
 
 
     return a.exec();

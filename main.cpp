@@ -50,9 +50,17 @@ int main(int argc, char *argv[])
     int C1=waveDataC1.toHex().toInt(0,16);
     qDebug()<<C1;
     
-    int numer = -5;
-    QByteArray arry2 = QByteArray::number(numer,16);  //这里10进制转换为16进制
-    qDebug()<<arry2;     //"fffffffb"
+   int n = 63;
+
+qDebug()<<QByteArray::number(n);              // returns "63"
+
+qDebug()<<QByteArray::number(n, 16);          // returns "3f"
+
+qDebug()<<QByteArray::number(n, 16).toUpper();  // returns "3F"
+
+qDebug()<<QByteArray::number(n, 2);          // returns "111111"
+
+qDebug()<<QByteArray::number(n, 8);          // returns "77"
 
 
     return a.exec();
